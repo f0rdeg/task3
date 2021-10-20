@@ -1,0 +1,91 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addWorkNumber",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"number","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "incompleteWork",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"int8"}
+			]
+		},
+		{
+			"name": "listWork",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"timestamp","type":"uint32"},{"name":"toggle","type":"bool"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "workNumber",
+			"inputs": [
+				{"name":"number","type":"int8"}
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"timestamp","type":"uint32"},{"name":"toggle","type":"bool"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "delWorkNumber",
+			"inputs": [
+				{"name":"number","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "trueWorkNumber",
+			"inputs": [
+				{"name":"number","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "toGetInLine",
+			"inputs": [
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "callNext",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"queue","type":"string[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"timestamp","type":"uint32"},{"name":"toggle","type":"bool"}],"name":"listW","type":"map(int8,tuple)"}
+	]
+}
